@@ -27,7 +27,7 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[calc(100vh-8rem)] md:min-h-[80vh]">
           {/* Left Image */}
           <div className="relative order-first lg:order-first">
-            <div className="relative aspect-[4/3] lg:aspect-[4/3] rounded-lg overflow-hidden shadow-2xl border border-gold/20 max-h-64 md:max-h-80 lg:max-h-96 xl:max-h-[28rem] 2xl:max-h-[32rem]">
+            <div className="relative aspect-[4/3] lg:aspect-[4/3] rounded-lg overflow-hidden shadow-2xl border border-gold/20 max-h-64 md:max-h-80 lg:max-h-96 xl:max-h-[28rem] 2xl:max-h-[32rem] mt-8 md:mt-0">
               <Image
                 src="/images/hero-bg.jpg"
                 alt="Quill pen and inkwell - Graphic Design Services"
@@ -40,7 +40,7 @@ export function HeroSection() {
           </div>
 
           {/* Right Content */}
-          <div className="relative z-10 text-center lg:text-right pt-16 md:pt-0">
+          <div className="relative z-10 text-center lg:text-right pt-0">
             <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl xl:text-6xl lg:text-7xl font-light text-foreground mb-4 md:mb-6 text-balance leading-tight">
               Κατερίνα Σκουλαρίκη
               <span className="block font-semibold mt-1 md:mt-2 tracking-tight bg-gradient-to-r from-[#B8860B] via-[#DAA520] to-[#CD853F] bg-clip-text text-transparent">
