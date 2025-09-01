@@ -1,0 +1,311 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Refined color palette with specific hex values */
+:root {
+  --background: #0b0b0c; /* Deep black background */
+  --foreground: #f4f1ea; /* Ivory text primary */
+  --card: #141414; /* Surface color */
+  --card-foreground: #f4f1ea;
+  --popover: #141414;
+  --popover-foreground: #f4f1ea;
+  --primary: #d4af37; /* Gold accent */
+  --primary-foreground: #0b0b0c;
+  --secondary: #141414;
+  --secondary-foreground: #f4f1ea;
+  --muted: #141414;
+  --muted-foreground: #c8c5bd; /* Text secondary */
+  --accent: #d4af37;
+  --accent-foreground: #0b0b0c;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: #f4f1ea;
+  --border: #b9972b; /* Gold borders */
+  --input: #141414;
+  --ring: #d4af37;
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: #141414;
+  --sidebar-foreground: #f4f1ea;
+  --sidebar-primary: #d4af37;
+  --sidebar-primary-foreground: #0b0b0c;
+  --sidebar-accent: #141414;
+  --sidebar-accent-foreground: #f4f1ea;
+  --sidebar-border: #b9972b;
+  --sidebar-ring: #d4af37;
+
+  /* Updated to specific hex values for refined palette */
+  --gold: #d4af37;
+  --gold-dark: #b9972b;
+  --gold-light: #e6c547;
+  --text-primary: #f4f1ea;
+  --text-secondary: #c8c5bd;
+  --surface: #141414;
+}
+
+.dark {
+  --background: #0b0b0c;
+  --foreground: #f4f1ea;
+  --card: #141414;
+  --card-foreground: #f4f1ea;
+  --popover: #141414;
+  --popover-foreground: #f4f1ea;
+  --primary: #d4af37;
+  --primary-foreground: #0b0b0c;
+  --secondary: #141414;
+  --secondary-foreground: #f4f1ea;
+  --muted: #141414;
+  --muted-foreground: #c8c5bd;
+  --accent: #d4af37;
+  --accent-foreground: #0b0b0c;
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: #b9972b;
+  --input: #141414;
+  --ring: #d4af37;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: #141414;
+  --sidebar-foreground: #f4f1ea;
+  --sidebar-primary: #d4af37;
+  --sidebar-primary-foreground: #0b0b0c;
+  --sidebar-accent: #141414;
+  --sidebar-accent-foreground: #f4f1ea;
+  --sidebar-border: #b9972b;
+  --sidebar-ring: #d4af37;
+
+  --gold: #d4af37;
+  --gold-dark: #b9972b;
+  --gold-light: #e6c547;
+  --text-primary: #f4f1ea;
+  --text-secondary: #c8c5bd;
+  --surface: #141414;
+}
+
+@theme inline {
+  /* Updated font variables to use Open Sans instead of Cormorant Garamond */
+  --font-serif: var(--font-open-sans);
+  --font-sans: var(--font-inter);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --color-gold: var(--gold);
+  --color-gold-dark: var(--gold-dark);
+  --color-gold-light: var(--gold-light);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-surface: var(--surface);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Ensure body uses ivory text, not grey */
+    color: var(--text-primary);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  .text-gold {
+    background: linear-gradient(135deg, #b8860b, #daa520, #cd853f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gold-dark {
+    background: linear-gradient(135deg, #8b7355, #b8860b, #a0522d);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gold-light {
+    background: linear-gradient(135deg, #daa520, #ffd700, #f4e4bc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Added refined text color utilities */
+  .text-primary {
+    color: var(--color-text-primary);
+  }
+
+  .text-secondary {
+    color: var(--color-text-secondary);
+  }
+
+  .border-gold {
+    border-image: linear-gradient(135deg, #b8860b, #daa520, #cd853f) 1;
+  }
+
+  .border-gold-dark {
+    border-image: linear-gradient(135deg, #8b7355, #b8860b, #a0522d) 1;
+  }
+
+  .bg-gold {
+    background: linear-gradient(135deg, #b8860b, #daa520, #cd853f);
+  }
+
+  .bg-gold-dark {
+    background: linear-gradient(135deg, #8b7355, #b8860b, #a0522d);
+  }
+
+  .bg-gold-light {
+    background: linear-gradient(135deg, #daa520, #ffd700, #f4e4bc);
+  }
+
+  /* Added surface background utility */
+  .bg-surface {
+    background-color: var(--color-surface);
+  }
+
+  .scroll-section {
+    scroll-margin-top: 120px;
+  }
+
+  button,
+  a,
+  [role="button"],
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
+  .btn,
+  .button,
+  [type="button"],
+  [type="submit"],
+  [type="reset"] {
+    cursor: pointer;
+  }
+
+  /* Updated background utilities with refined colors */
+  .bg-black-soft {
+    background-color: var(--color-surface);
+  }
+
+  .bg-black-deep {
+    background-color: var(--color-background);
+  }
+
+  .bg-black-card {
+    background-color: var(--color-surface);
+  }
+
+  .section-black {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+  }
+
+  .section-black-deep {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+  }
+
+  .gold-on-black {
+    background-color: var(--color-background);
+    color: var(--color-gold);
+  }
+
+  /* Added typography utilities for responsive heading sizes */
+  .heading-responsive {
+    font-size: clamp(1.875rem, 4vw, 3rem); /* 30px to 48px */
+    line-height: 1.1;
+  }
+
+  .subtitle-tight {
+    letter-spacing: -0.02em; /* Tighter tracking for "Συμβολαιογράφος" */
+  }
+
+  /* Updated CTA button styles with golden gradients */
+  .cta-primary {
+    background: linear-gradient(135deg, #b8860b, #daa520, #cd853f);
+    color: var(--color-background);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+
+  .cta-primary:hover {
+    background: linear-gradient(135deg, #8b7355, #b8860b, #a0522d);
+  }
+
+  .cta-secondary {
+    background: transparent;
+    background: linear-gradient(135deg, #b8860b, #daa520, #cd853f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 2px solid;
+    border-image: linear-gradient(135deg, #b8860b, #daa520, #cd853f) 1;
+  }
+
+  .cta-secondary:hover {
+    background: linear-gradient(135deg, #b8860b, #daa520, #cd853f);
+    -webkit-text-fill-color: var(--color-background);
+    color: var(--color-background);
+  }
+}
