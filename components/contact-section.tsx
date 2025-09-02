@@ -36,7 +36,7 @@ export function ContactSection({ id }: ContactSectionProps) {
 
           <div className="mt-8 flex items-center justify-center gap-2 text-muted-foreground">
             <MapPin className="h-4 w-4 text-gold" />
-            <span>Ελ. Βενιζέλου 72-76, Ξάνθη</span>
+            <span>Ελ. Βενιζέλου 72-76, Ξάνθη, 1ος όροφος</span>
           </div>
 
           {/* TODO: Add office hours and availability information */}
@@ -64,10 +64,6 @@ export function ContactSection({ id }: ContactSectionProps) {
               referrerPolicy="no-referrer-when-downgrade"
               className="w-full h-96 md:h-[400px]"
             />
-          </div>
-
-          <div className="text-center mt-6 text-sm text-muted-foreground">
-            <p>Διαθέσιμος χώρος στάθμευσης στην περιοχή</p>
           </div>
         </div>
       </div>

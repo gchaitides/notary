@@ -109,7 +109,7 @@ export function ServicesSection({ id }: ServicesSectionProps) {
                           <img
                             src="/images/quill-icon.png"
                             alt="Quill pen icon"
-                            className="w-3 h-3 object-contain mr-3 mt-2 flex-shrink-0"
+                            className="w-5 h-5 object-contain mr-3 mt-1 flex-shrink-0"
                           />
                           <span>{item}</span>
                         </li>
